@@ -1,0 +1,30 @@
+# 托管支付宝APP-退款
+- test:
+   send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      terminal_type: ITG
+      refund_total_amount: 1
+      refund_amount: 1
+      language: ZH-CN
+      risk_params: '{"ip":"127.0.0.1"}'
+   except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '111392'
+      channel_id: 6138
+      channel_name: 支付宝小程序(直联)
+      channel_prod_id: 6800
+      channel_prod_name: 支付宝小程序(直联)
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 11
+      business_type2: 13
+      business_type3: 92
+   desc: 111392_托管支付宝小程序（3.4.0，收银后台，工行支付宝退款）

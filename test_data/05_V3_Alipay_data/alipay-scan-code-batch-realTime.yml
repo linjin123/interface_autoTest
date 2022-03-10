@@ -1,0 +1,52 @@
+- test:
+   send_data:
+     service: batch_trade_pay_alipay
+     version: 3.4.0
+     req_seq_no: 962E3K2Z3RV6P23PY396SIRSW
+     partner: 1000011005
+     input_charset: UTF-8
+     language: ZH-CN
+     terminal_type: ITG
+     sign_type: MD5_RSA_TW
+     notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+     is_guarantee: FALSE
+     out_trade_no: BatchAliPay20211107114450
+     out_trade_time: 20211107114450
+     bar_code: SCAN_CODE
+     currency_type: CNY
+     total_order_amount: 6
+     total_amount: 4
+     total_count: 2
+     pay_expire_time: 30
+     is_virtual_product: TRUE
+     product_name: 12
+     product_info: 2222
+     attach: 333333333333
+     risk_params: '{ "ip": "127.0.0.1" }'
+     hb_fq_num: 3
+     hb_fq_seller_percent: 0
+     sub_orders:
+       - sub_out_trade_no: BatchAliPaySub20211107105152
+         partner: '1000011005'
+         market_acc_partner: '1010076133'
+         market_amount: '1'
+         pay_amount: '2'
+         sub_product_name: weq
+         sub_product_info: qwew
+       - sub_out_trade_no: BatchAliPaySub20211107105153
+         partner: '1000011005'
+         market_acc_partner: '1010076133'
+         market_amount: '1'
+         pay_amount: '2'
+         sub_product_name: weq
+         sub_product_info: qwew
+
+   except:
+      result_code: 1001
+      result_info: 成功
+   desc: 01005_B2C即时到账交易（3.4.0，H5收银台，余额支付）
+
+
+
+
+

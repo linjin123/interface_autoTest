@@ -1,0 +1,13 @@
+{
+  "mail_host" : "smtp.midea.com" ,
+  "mail_user" : "dev_mideapay@midea.com",
+  "mail_passwd" : "Mpay@202002",
+  "mail_port":465,
+  "sender":"dev_mideapay@midea.com",
+  "receivers":"xiongyc9@midea.com",
+  "subject":"code ",
+  "mysql_host":"10.16.157.93",
+  "mysql_user":"**",
+  "mysql_passwd":"**"
+}
+

@@ -1,0 +1,152 @@
+# 快捷支付-即时到账交易-111015-退款
+ - test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: '1000011005'
+      input_charset: UTF-8
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      terminal_type: ITG
+      refund_total_amount: 3
+      refund_market_amount: 2
+      refund_amount: 1
+      language: ZH-CN
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      business_type1: 11
+      business_type2: 10
+      business_type3: 15
+      pay_channel: 1
+      guarantee_type: 0
+      origi_arrival_status: 3
+      scence: on_trade_date
+    desc: 快捷支付-即时到账交易-111015-退款
+
+# 快捷支付-即时到账交易-111015-退款
+ - test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: '1000011005'
+      input_charset: UTF-8
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      terminal_type: ITG
+      refund_total_amount: 3
+      refund_market_amount: 2
+      refund_amount: 1
+      language: ZH-CN
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      business_type1: 10
+      business_type2: 10
+      business_type3: 15
+      pay_channel: 1
+      guarantee_type: 1
+      origi_arrival_status: 3
+      scence: on_trade_date
+    desc: 快捷支付-即时到账交易-111015-退款
+
+# 快捷支付-即时到账交易-111015-退款
+ - test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: '1000011005'
+      input_charset: UTF-8
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      terminal_type: ITG
+      refund_total_amount: 3
+      refund_market_amount: 2
+      refund_amount: 1
+      language: ZH-CN
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      business_type1: 10
+      business_type2: 10
+      business_type3: 15
+      pay_channel: 1
+      guarantee_type: 1
+      origi_arrival_status: 3
+      scence: D0_arrival_unconfirmed
+    desc: 快捷支付-即时到账交易-111015-退款
+
+# 微信小程序借记卡-担保交易-101232-退款
+ - test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: '1000011005'
+      input_charset: UTF-8
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      terminal_type: ITG
+      refund_total_amount: 1
+      refund_market_amount:
+      refund_amount: 1
+      language: ZH-CN
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      business_type1: 10
+      business_type2: 12
+      business_type3: 32
+      pay_channel: 1
+      guarantee_type: 1
+      confirm_receive_status: 1
+      origi_arrival_status: 3
+      scence: on_trade_date
+    desc: 微信小程序借记卡-担保交易-101232-退款
+
+# 微信小程序借记卡-担保交易-101232-退款
+ - test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: '1000011005'
+      input_charset: UTF-8
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      terminal_type: ITG
+      refund_total_amount: 1
+      refund_market_amount:
+      refund_amount: 1
+      language: ZH-CN
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      business_type1: 10
+      business_type2: 12
+      business_type3: 32
+      pay_channel: 1
+      guarantee_type: 1
+      confirm_receive_status: 0
+      origi_arrival_status: 3
+      scence: on_trade_date
+    desc: 微信小程序借记卡-担保交易-101232-退款
+
+# 微信小程序借记卡-担保交易-101232-退款
+ - test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: '1000011005'
+      input_charset: UTF-8
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      terminal_type: ITG
+      refund_total_amount: 1
+      refund_market_amount: 1
+      refund_amount: 1
+      language: ZH-CN
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      business_type1: 11
+      business_type2: 12
+      business_type3: 32
+      pay_channel: 1
+      guarantee_type: 0
+      origi_arrival_status: 3
+      scence: on_trade_date
+    desc: 微信小程序借记卡-担保交易-101232-退款
+

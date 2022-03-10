@@ -1,0 +1,508 @@
+#*********************************************托管支付宝APP*******************************************************
+# 托管支付宝APP-退款-即时到账-交易当天退款
+# guarantee_type:是否担保交易，0-即时到账、1-担保交易
+# origi_arrival_status:原交易单是否资金已到账，1-未到账、3-已到账
+# scence:场景，on_trade_date-交易当天退款、arrival_unconfirmed-已到账未确认收货、common-其他场景
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '111383'
+      channel_id: 6137
+      channel_name: 工行支付宝
+      channel_prod_id: 6137
+      channel_prod_name: 工行支付宝
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 11
+      business_type2: 13
+      business_type3: 83
+      guarantee_type: 0
+      origi_arrival_status: 1
+      scence: on_trade_date
+    desc: 111383_托管支付宝APP（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝APP-退款-即时到账-交易跨天退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '111383'
+      channel_id: 6137
+      channel_name: 工行支付宝
+      channel_prod_id: 6137
+      channel_prod_name: 工行支付宝
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 11
+      business_type2: 13
+      business_type3: 83
+      guarantee_type: 0
+      origi_arrival_status: 1
+      scence: common
+    desc: 111383_托管支付宝APP（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝APP-退款-即时到账-交易到账退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '111383'
+      channel_id: 6137
+      channel_name: 工行支付宝
+      channel_prod_id: 6137
+      channel_prod_name: 工行支付宝
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 11
+      business_type2: 13
+      business_type3: 83
+      guarantee_type: 0
+      origi_arrival_status: 3
+      scence: common
+    desc: 111383_托管支付宝APP（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝APP-退款-担保交易-交易当天退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '101383'
+      channel_id: 6137
+      channel_name: 工行支付宝
+      channel_prod_id: 6137
+      channel_prod_name: 工行支付宝
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 10
+      business_type2: 13
+      business_type3: 83
+      guarantee_type: 1
+      origi_arrival_status: 1
+      scence: on_trade_date
+    desc: 101383_托管支付宝APP（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝APP-退款-担保交易-交易跨天退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '101383'
+      channel_id: 6137
+      channel_name: 工行支付宝
+      channel_prod_id: 6137
+      channel_prod_name: 工行支付宝
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 10
+      business_type2: 13
+      business_type3: 83
+      guarantee_type: 1
+      origi_arrival_status: 1
+      scence: common
+    desc: 101383_托管支付宝APP（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝APP-退款-担保交易-未确认收货退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '101383'
+      channel_id: 6137
+      channel_name: 工行支付宝
+      channel_prod_id: 6137
+      channel_prod_name: 工行支付宝
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 10
+      business_type2: 13
+      business_type3: 83
+      guarantee_type: 1
+      origi_arrival_status: 3
+      scence: arrival_unconfirmed
+    desc: 101383_托管支付宝APP（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝APP-退款-担保交易-已确认收货退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '101383'
+      channel_id: 6137
+      channel_name: 工行支付宝
+      channel_prod_id: 6137
+      channel_prod_name: 工行支付宝
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 10
+      business_type2: 13
+      business_type3: 83
+      guarantee_type: 1
+      origi_arrival_status: 3
+      scence: common
+    desc: 101383_托管支付宝APP（3.4.0，收银后台，工行支付宝退款）
+
+#*********************************************托管支付宝小程序*******************************************************
+# 托管支付宝小程序-退款-即时到账-交易当天退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '111392'
+      channel_id: 6138
+      channel_name: 支付宝小程序(直联)
+      channel_prod_id: 6800
+      channel_prod_name: 支付宝小程序(直联)
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 11
+      business_type2: 13
+      business_type3: 92
+      guarantee_type: 0
+      origi_arrival_status: 1
+      scence: on_trade_date
+    desc: 111392_托管支付宝小程序（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝小程序-退款-即时到账-交易跨天退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '111392'
+      channel_id: 6138
+      channel_name: 支付宝小程序(直联)
+      channel_prod_id: 6800
+      channel_prod_name: 支付宝小程序(直联)
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 11
+      business_type2: 13
+      business_type3: 92
+      guarantee_type: 0
+      origi_arrival_status: 1
+      scence: common
+    desc: 111392_托管支付宝小程序（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝小程序-退款-即时到账-交易到账退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '111392'
+      channel_id: 6138
+      channel_name: 支付宝小程序(直联)
+      channel_prod_id: 6800
+      channel_prod_name: 支付宝小程序(直联)
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 11
+      business_type2: 13
+      business_type3: 92
+      guarantee_type: 0
+      origi_arrival_status: 3
+      scence: common
+    desc: 111392_托管支付宝小程序（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝小程序-退款-担保交易-交易当天退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '101392'
+      channel_id: 6138
+      channel_name: 支付宝小程序(直联)
+      channel_prod_id: 6800
+      channel_prod_name: 支付宝小程序(直联)
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 10
+      business_type2: 13
+      business_type3: 92
+      guarantee_type: 1
+      origi_arrival_status: 1
+      scence: on_trade_date
+    desc: 101392_托管支付宝小程序（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝小程序-退款-担保交易-交易跨天退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '101392'
+      channel_id: 6138
+      channel_name: 支付宝小程序(直联)
+      channel_prod_id: 6800
+      channel_prod_name: 支付宝小程序(直联)
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 10
+      business_type2: 13
+      business_type3: 92
+      guarantee_type: 1
+      origi_arrival_status: 1
+      scence: common
+    desc: 101392_托管支付宝小程序（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝小程序-退款-担保交易-未确认收货退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '101392'
+      channel_id: 6138
+      channel_name: 支付宝小程序(直联)
+      channel_prod_id: 6800
+      channel_prod_name: 支付宝小程序(直联)
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 10
+      business_type2: 13
+      business_type3: 92
+      guarantee_type: 1
+      origi_arrival_status: 3
+      scence: arrival_unconfirmed
+    desc: 101392_托管支付宝小程序（3.4.0，收银后台，工行支付宝退款）
+
+# 托管支付宝小程序-退款-担保交易-已确认收货退款
+- test:
+    send_data:
+      service: trade_refund
+      version: 3.1.0
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      currency_type: CNY
+      refund_total_amount: 1
+      refund_amount: 1
+      attach: "托管交易退款"
+      risk_params: '{"ip":"127.0.0.1"}'
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '101392'
+      channel_id: 6138
+      channel_name: 支付宝小程序(直联)
+      channel_prod_id: 6800
+      channel_prod_name: 支付宝小程序(直联)
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 10
+      business_type2: 13
+      business_type3: 92
+      guarantee_type: 1
+      origi_arrival_status: 3
+      scence: common
+    desc: 101392_托管支付宝小程序（3.4.0，收银后台，工行支付宝退款）

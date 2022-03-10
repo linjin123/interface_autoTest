@@ -1,0 +1,57 @@
+# 托管支付宝APP-合单即时到账
+- test:
+    send_data:
+      service: batch_trade_pay_alipay
+      version: 3.4.0
+      req_seq_no: 962E3K2Z3RV6P23PY396SIRSW
+      partner: 1000011005
+      input_charset: UTF-8
+      language: ZH-CN
+      terminal_type: ITG
+      sign_type: MD5_RSA_TW
+      notify_url: https://bg.mideaepayuat.com/testAcceptCheckSign.htm
+      is_guarantee: TRUE
+      out_trade_no: BatchAliPay20211107114450
+      out_trade_time: 20211107114450
+      bar_code: APP
+      currency_type: CNY
+      total_order_amount: 4
+      total_amount: 4
+      total_count: 2
+      pay_expire_time: 30
+      is_virtual_product: TRUE
+      product_name: 空调
+      product_info: 支付宝买买买
+      attach: 自动化测试-托管支付宝APP
+      risk_params: '{ "ip": "127.0.0.1" }'
+      sub_orders:
+        - sub_out_trade_no: BatchAliPaySub20211107105152
+          partner: '1000011005'
+          market_amount:
+          market_acc_partner:
+          pay_amount: '2'
+          sub_product_name: 冰箱
+          sub_product_info: 支付宝买买买
+        - sub_out_trade_no: BatchAliPaySub20211107105152
+          partner: '1000011005'
+          market_amount:
+          market_acc_partner:
+          pay_amount: '2'
+          sub_product_name: 冰箱
+          sub_product_info: 支付宝买买买
+    except:
+      result_code: 1001
+      result_info: 成功
+      business_types: '101383'
+      channel_id: 6137
+      channel_name: 工行支付宝
+      channel_prod_id: 6137
+      channel_prod_name: 工行支付宝
+      profit_channel_id: 10100101
+      profit_channel_name: 工行托管账户
+      profit_channel_prod_id: 101001
+      profit_channel_prod_name: 工行托管账户
+      business_type1: 10
+      business_type2: 13
+      business_type3: 83
+    desc: 101383_托管支付宝APP（3.4.0，收银后台，工行支付宝支付）
