@@ -33,7 +33,7 @@ if __name__ == "__main__":
     #         # "pytest test_case/01_test_B2C_trade/test_111014_quick_pay.py::test_b2cTrade_PC_pay --settings=settings_uat")
     #         "pytest test_case/04_test_V3_Wechat_data/test_111232_wechat_mini_program_single.py::test_pay --settings=settings_uat")
     # "pytest test_case/04_test_V3_Wechat_data/test_111231_wechat_mini_program_single.py::test_pay --settings=settings_uat"
-    "pytest test_case/05_test_V3_Alipay_data/test_trade_wechatpay_withhold_check.py::test_alipay_app_single_immediately_arrival --settings=settings_uat" )
+    "pytest test_case/wechatAndAlipaySecretFreeWhithhold/test_trade_wechatpay_withhold_check.py::test_alipay_app_single_immediately_pay_success --settings=settings_uat" )
 
     #     )
 
