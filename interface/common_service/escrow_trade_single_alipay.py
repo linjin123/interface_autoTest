@@ -17,7 +17,7 @@ from operationMysql.operation_db_checkrecord import OperationDbCheckrecord
 from operationMysql.operation_db_bank import OperationDbBank
 from common.escorw_trade_check import EscrowTradeCheck
 from common.dubbo import dubbo
-from simple_settings import settings
+
 
 
 

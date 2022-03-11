@@ -1,0 +1,18 @@
+#查询（支付宝）正常流程
+- test:
+    send_data:
+      service: trade_wechat_sign_query
+      version: 3.0.0
+      partner: 1000011005
+      charset: UTF-8
+      language: ZH-CN
+      sign_type: MD5_RSA_TW
+    except:
+      service: trade_wechat_sign_query
+      version: 3.0.0
+      result_code: 1001
+      result_info: 成功
+      charset: UTF-8
+      sign_type: MD5_RSA_TW
+      partner : 1000011005
+    desc: 3.2.10.8_支付宝签约查询
